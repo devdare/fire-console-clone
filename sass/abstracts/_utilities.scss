@@ -1,0 +1,38 @@
+.dark-icon {
+  fill: #673ab7 !important;
+  background-color: #673ab7;
+}
+
+.color-purple {
+  background-color: $color-purple;
+}
+.color-orange {
+  background-color: $color-orange;
+}
+
+.color-yg {
+  background-color: rgb(159, 192, 93);
+}
+
+.color-dark-blue {
+  background-color: #134b99;
+}
+.color-light-blue {
+  background-color: #347ae2;
+}
+
+.color-light-purple {
+  background-color: #432e72;
+}
+
+.pl-1 {
+  @include pl(1);
+}
+
+.lcorner {
+  margin-left: auto;
+}
+
+.grey-icon {
+  font-size: 1.9rem;
+}

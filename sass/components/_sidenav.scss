@@ -1,0 +1,129 @@
+.side-nav {
+  display: flex;
+  flex-direction: column;
+
+  flex: 0 0 auto;
+  width: 250px;
+  background-color: $color-sidenav-bg;
+  color: $color-white;
+  font-size: 1.5rem;
+  align-items: center;
+  transition: all 0.2s;
+
+  @include respond(tab-port) {
+    width: 0;
+    overflow: hidden;
+  }
+
+  &__overview {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border-bottom: $sidenav-line;
+    border-top: $sidenav-line;
+
+    & > &--icon {
+      display: block;
+      margin-right: 2rem;
+    }
+
+    cursor: pointer;
+
+    &--icon {
+      width: 2rem;
+      height: 2rem;
+      fill: currentColor;
+    }
+
+    &--text {
+      padding-left: 4rem;
+
+      display: inline-block;
+    }
+
+    &--main {
+      display: flex;
+      color: $color-sidenav-icontext;
+      padding: 1rem 0;
+
+      border-right: $sidenav-line;
+      padding-right: 2.5rem;
+      justify-content: flex-start;
+
+      &:hover {
+        background-color: rgba($color-grey, 0.2);
+      }
+    }
+  }
+
+  &__item {
+    padding: 2rem 0;
+    width: 100%;
+    // display: flex;
+    // justify-content: space-between;
+    padding: 2rem;
+    cursor: pointer;
+
+    &-bottom {
+      margin-top: auto;
+      // justify-content: flex-start;
+      display: flex;
+      color: $color-grey-light-1;
+      padding: 2rem;
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: $sidenav-line;
+      &:hover {
+        background-color: rgba($color-grey, 0.2);
+      }
+    }
+
+    &:last-of-type {
+      color: $color-grey-light-1;
+    }
+
+    &:first-of-type {
+      background-color: yellowgreen;
+      border-top: $sidenav-line;
+    }
+
+    &--subtext {
+      display: block;
+      font-size: 1.2rem;
+      color: $color-grey;
+    }
+
+    &--text {
+      & span {
+        display: block;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__item__list {
+    display: none;
+    justify-content: flex-start;
+    flex-direction: column;
+    list-style: none;
+    &item {
+      display: flex;
+    }
+  }
+}
+
+.side-nav__item:active .side-nav__item__list {
+  display: flex;
+  padding-top: 2rem;
+}
+
+.listitem {
+  &--icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    fill: $color-grey-light-1;
+  }
+}

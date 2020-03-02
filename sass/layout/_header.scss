@@ -1,0 +1,63 @@
+.header {
+  display: flex;
+  flex: 1 0 auto;
+  width: 100%;
+
+  &__side {
+    display: flex;
+    flex: 0 0 250px;
+    background-color: $color-sidenav-bg;
+    padding: 1rem 2rem;
+    transition: all 0.2s;
+
+    @include respond(tab-port) {
+      flex: 0 0 0;
+      padding: 0;
+      width: 0;
+      overflow: hidden;
+    }
+
+    &--img {
+      width: 15%;
+    }
+
+    &--text {
+      font-family: $font-family;
+      font-weight: 400;
+    }
+  }
+
+  &__main {
+    background-color: $color-primary;
+    color: $color-white;
+    display: flex;
+    flex: 1;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    font-size: 1.4rem;
+
+    & > * {
+      padding: 1rem;
+      cursor: pointer;
+    }
+
+    &--text:nth-child(3) {
+      margin-left: auto;
+    }
+
+    &--icon {
+      width: 2rem;
+      height: 1.5rem;
+      fill: currentColor;
+
+      &-text {
+        background-color: #673ab7;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}
